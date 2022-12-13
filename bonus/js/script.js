@@ -50,13 +50,25 @@ let our_team =
 //  2.1 - Visualizzo a schermo le informazioni di ogni oggetto ciclato.
 
 
-let team = document.querySelector(".team");
+let row = document.querySelector(".row-cards");
 
 for (let i=0; i<our_team.length; i++ ){
     let teams = our_team[i];
-    let info = `${teams.name} ${teams.role} ${teams.image}`;
-    console.log(info)
-    team.innerHTML += `<li>${info}</li>`;
+    row.innerHTML += (`
+    <div class="col-4">
+        <div class="content">
+            <div class="card my-4" style="width: 18rem;">
+            <img class="card-img-top" src="./img/${teams.image}">
+                <div class="card-body text-secondary text-center">
+                <h5>${teams.name}</h5>
+                <span>${teams.role}</span>
+                </div>
+            </div>
+        </div>
+    </div>`);
+    let cards = document.getElementsByClassName(".card").innerHTML = (``);
+    console.log(cards)
+    
 }
 
 
