@@ -4,9 +4,10 @@ MILESTONE 1: Stampare su console, per ogni membro del team, le informazioni di n
 MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 Una volta che avete terminato una milestone, fare un push e nel messaggio indicare che avete terminato la milesione numero X. */
 
+//MILESTONE 0
 //1 - Creo l'array di oggetti con le informazioni fornite
 
-let our_team
+let our_team =
 [
     {
         name: "Wayne Barnett",
@@ -39,3 +40,11 @@ let our_team
         image: "barbara-ramos-graphic-designer.jpg"
     },
 ];
+
+//MILESTONE 1
+//2 - 
+for (let i=0; i<our_team.length; i++ ){
+    for(let key in our_team[i]){
+        console.log(our_team[i][key]);
+    }
+}
