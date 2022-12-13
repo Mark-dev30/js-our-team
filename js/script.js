@@ -52,10 +52,12 @@ let our_team =
 
 
 let team = document.querySelector(".team");
+
 for (let i=0; i<our_team.length; i++ ){
-    for(let key in our_team[i]){
-        team.innerHTML += (`<li>${our_team[i][key]}</li>`);
-    }
+    let teams = our_team[i];
+    let info = `${teams.name} ${teams.role} ${teams.image}`;
+    console.log(info)
+    team.innerHTML += `<li>${info}</li>`;
 }
 
 
